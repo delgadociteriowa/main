@@ -1,0 +1,74 @@
+MOBILE
+
+	Slide 1
+
+	DELGADO / CITERIO: font-size: 1.75em
+	Front-end Developer: 1.5em
+	p: 1em
+	links: .75em
+
+
+	Slide 2
+
+	ABOUT: 1.5em
+	p: 1em
+
+
+	Slide 3
+
+	SKILLS: 1.5em
+	h3: 1em
+	percentage: 1em
+	p: .70em
+
+
+	Slide 4
+
+	WORKS: 1.5em
+	Titles: 1em
+	Go to...: .75em;
+
+	Overlay
+
+	Title: 1.5em
+	p: 1em
+
+
+
+LANDSCAPE
+
+	Slide 1
+
+	DELGADO / CITERIO: font-size: 1.25em
+	Front-end Developer: 1.25em
+	p: .85em
+	links: .5em
+
+
+	Slide 2
+
+	ABOUT: 1.25em
+	p: .85em
+
+
+	Slide 3
+
+	SKILLS: 1.25em
+	h3: 1em
+	p: .85em
+
+
+	Slide 4
+
+	WORKS: 1.25em
+
+
+	Overlay
+
+	Title: 1.25em
+	p: .75em
+
+
+TABLET
+
+PC

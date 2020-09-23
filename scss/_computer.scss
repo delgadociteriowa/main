@@ -1,0 +1,147 @@
+@media (min-width: 1250px){
+	body{
+		padding: 2em 15em;
+		background-color: #2c3c5a;
+		display: flex;
+		justify-content: center;
+	}
+	/*overlays*/
+
+	.overlay {
+		grid-template-rows: 1em 4em min-content min-content 4em 1em;
+		width: 60%;
+		height: auto;
+		.card-header{
+			h2{
+				font-size: 1.75em;
+			}
+		}
+		.card-img{
+			padding:1em;
+			.wrap-img{
+				background-size: 100% auto;
+				/*width: 50em;*/
+				height: 200px;
+			}
+		}
+		.card-body{
+			padding: 1em;
+			p{
+				font-size: 1em;
+			}
+		}
+		.card-footer-1,.card-footer-2{
+			a{
+				width: 80%;
+				height: 60%;
+				font-size: .85em;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.swiper-container {
+		box-shadow: 1em 1em #0b1933;
+		.slide1{
+			grid-template-rows: 1em 4em 1fr 4em 1fr 4em 1em;
+			.header{
+				h1{
+					font-size: 2em;
+				}
+			}
+			.photo{
+				background-size: auto 90%;
+			}
+			.title{
+				h2{
+					font-size: 1.5em;
+				}
+			}
+			.description{
+				padding: 0 14em;
+				.text{
+					p{
+						font-size: 1em;
+						margin: 1em 0 2em 0;
+					}
+				}
+				.icon{
+					width: 2.5em;
+				}
+				.link{
+					font-size: .75em;
+					margin-top: 1em;
+				}
+			}
+		}
+		.slide2{
+			grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.about-text{
+				padding: 0em 14em;
+				p{
+					font-size: 1em;
+				}
+			}
+		}
+		.slide3{
+			grid-template-rows: 1em 4em 1fr 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.percentage{
+				padding: 0em 14em;
+				h3{
+					font-size: 1em;
+				}
+				.per-container{
+					.per-number{
+						font-size: 1em;
+					}
+				}
+				p{
+					font-size: .75em;
+					margin-top: .6em;
+				}
+			}
+		}
+		.slide4{
+			grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.gallery-space{
+				h3{
+					font-size: 1em;
+				}
+				img{
+				    width: 35%;
+				}
+				.begallery{
+					width: 20%;
+				}
+			}
+			.combination2{
+				a{
+					font-size: .75em;
+				}
+			}
+		}
+	}
+	/*swiper-buttons*/
+	.swiper-button-next, .swiper-button-prev {
+		bottom: 3.5em;
+	}
+	.swiper-button-next.swiper-button-white, .swiper-button-prev.swiper-button-white {
+	    font-size: .5em;
+	}
+}
+

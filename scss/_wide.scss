@@ -1,0 +1,92 @@
+@media (min-width: 1450px){
+	body{
+		padding: 2em 16em;
+	}
+
+	.overlay{
+		grid-template-rows: 1em 6em min-content min-content 8em 1em;
+		.card-header{
+			h2{
+				font-size: 2em;
+			}
+		}
+		.card-img{
+			padding:2em;
+			.wrap-img{
+				height: 300px;
+			}
+		}
+		.card-body{
+			padding: 1em 2em;
+		}
+	}
+
+	.swiper-container {
+		.slide1{
+			grid-template-rows: 1em 6em 1fr 4em 1fr 4em 1em;
+			.header{
+				h1{
+					font-size: 2.25em;
+				}
+			}
+			.description{
+				padding: 0 18em;
+				.text{
+					p{
+						margin: 2em 0 3em 0;
+					}
+				}
+			}
+		}
+		.slide2{
+			grid-template-rows: 1em 6em 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 2em;
+				}
+			}
+			.about-text{
+				padding: 0em 18em;
+				p{
+					font-size: 1.25em;
+				}
+			}
+		}
+		.slide3{
+			grid-template-rows: 1em 6em 1fr 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 2em;
+				}
+			}
+			.percentage{
+				padding: 0em 18em;
+				h3{
+					font-size: 1.25em;
+				}
+				p{
+					font-size: .75em;
+					margin-top: .6em;
+				}
+			}
+		}
+		.slide4{
+			grid-template-rows: 1em 6em 1fr 1fr 1fr 4em 1em;
+			.header{
+				h2{
+					font-size: 2em;
+				}
+			}
+			.gallery-space{
+				h3{
+					font-size: 1.25em;
+				}
+			}
+			.combination2{
+				a{
+					font-size: .85em;
+				}
+			}
+		}
+	}
+}

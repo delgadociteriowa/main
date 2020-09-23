@@ -1,0 +1,139 @@
+@media (min-width: 600px) {
+	
+
+	/*overlays*/
+	
+	.overlay {
+		grid-template-rows: 1em 8em min-content min-content 8em 1em;
+		.card-header{
+			h2{
+				font-size: 1.75em;
+			}
+		}
+		.card-img{
+			.wrap-img{
+				height: 300px;
+			}
+		}
+		.card-body{
+			p{
+				font-size: 1.25em;
+				margin-bottom: 2em;
+			}
+		}
+		.card-footer-1,.card-footer-2{
+			a{
+				width: 60%;
+				height: 40%;
+				font-size: 1em;
+			}
+		}
+	}
+	
+
+	/*slides*/
+	
+	.swiper-container {
+		.slide1{
+			grid-template-rows: 1em 8em 1fr 6em 2fr 8em 1em;
+			.header{
+				h1{
+					font-size: 2.25em;
+				}
+			}
+			.title{
+				h2{
+					font-size: 2em;
+				}
+			}
+			.description{
+				padding: 0em 8em 0em 8em;
+				.text{
+					p{
+						font-size: 1.25em;
+						margin: 2em 0 3em 0;
+					}
+				}
+				.icon{
+					width: 3.5em;
+				}
+				.link{
+					font-size: 1em;
+				}
+			}
+		}
+		.slide2{
+			grid-template-rows: 1em 8em 1fr 1fr 1fr 8em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.about-text{
+				padding: 0em 8em 0em 8em;
+				p{
+					font-size: 1.25em;
+				}
+			}
+		}
+		.slide3{
+			grid-template-rows: 1em 8em 1fr 1fr 1fr 1fr 8em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.percentage{
+				padding: 0em 8em 0em 8em;
+				h3{
+					font-size: 1.25em;
+					margin-top: 1em;
+					margin-bottom: .4em;
+				}
+				.per-container{
+					.per-number{
+						font-size: 1.25em;
+						padding: .1em .4em;
+					}
+				}
+				p{
+					font-size: 1em;
+				}
+			}
+		}
+		.slide4{
+			grid-template-rows: 1em 8em 1fr 1fr 1fr 8em 1em;
+			.header{
+				h2{
+					font-size: 1.75em;
+				}
+			}
+			.gallery-space{
+				h3{
+					font-size: 1.25em;
+					margin-top: 1em;
+					margin-bottom: 1em;
+				}
+				img{
+				    width: 60%;
+				}
+				.begallery{
+					width: 30%;
+				}
+			}
+			.combination2{
+				a{
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	.swiper-button-next, .swiper-button-prev {
+		bottom: 4em;
+	}
+	.swiper-button-next.swiper-button-white, .swiper-button-prev.swiper-button-white {
+	    font-size: .75em;
+	}
+
+	
+}
