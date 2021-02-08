@@ -1,625 +1,631 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
-
 /*variables*/
 
 $base-color: #48608d;
 $base-color-dark: #2c3c5a;
 $second-color: #fff;
-$font-one:'Montserrat', sans-serif;
-$font-two:'Open Sans', sans-serif;
-
+$font-one: 'Montserrat', sans-serif;
+$font-two: 'Open Sans', sans-serif;
 
 /*base*/
 
-html, body{
-	height: 100%;
-	box-sizing: border-box;
-	background: #fff;
-	font-size: 12px; 
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 12px;
 }
 body {
-	margin: 0;
-	font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
-
 
 /*overlays*/
 
 .overlay {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: rgba(44,60,90,.7);
-    z-index: 10;
-    color: white;
-    display: none;
-    opacity: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(44, 60, 90, 0.7);
+  z-index: 10;
+  color: white;
+  display: none;
+  opacity: 0;
 
-	grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1em;
-	grid-template-rows: 1em 4em min-content min-content 4em 1em;
-	grid-template-areas: "bt bt bt bt bt bt bt bt bt bt bt bt"
-						 "bl ch ch ch ch ch ch ch ch ch ch br"
-						 "bl ci ci ci ci ci ci ci ci ci ci br"
-						 "bl cb cb cb cb cb cb cb cb cb cb br"
-						 "bl f1 f1 f1 f1 f1 f2 f2 f2 f2 f2 br"
-						 "bb bb bb bb bb bb bb bb bb bb bb bb";
-	.card-header{
-		grid-area: ch;
-		background-color: $second-color;
-		display: flex;
-		align-items: center;
-		h2{
-			color: $base-color;
-			font-family: $font-one;
-			text-align: center;
-			font-size: 1.5em;
-			font-weight: 100;
-			letter-spacing: 1px;
-			margin-left: 1em;
-		}
-	}
-	.card-img{
-		grid-area: ci;
-		background-color: $base-color;
-		padding:1em;
-		.wrap-img{
-			background-color: $second-color;
-			background-repeat: no-repeat;
-			background-size: 100% auto;
-			width: 100%;
-			height: 175px;
-		}
-		.animate-image{
-			animation: animateimage 30s infinite forwards;
-		}
-	}
-	.card-body{
-		grid-area: cb;
-		background-color: $second-color;
-		padding: 1em;
-		p{
-			font-family: $font-two;
-			color:$base-color;
-			font-size: 1em;
-			margin: 0;
-		}
-	}
-	.card-footer-1,.card-footer-2{
-		background-color: $base-color;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		a{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 80%;
-			height: 60%;
-			text-align: center;
-			color: $base-color;
-			background-color: $second-color;
-			font-family: $font-one;
-			font-size: .85em;
-			text-decoration: none;
-			border-radius: 5px;
-			box-shadow: $base-color-dark 0px 3px;
-			font-weight: bold;
-		}
-		a:hover{
-			background-color: #f0f0f0;
-		}
-	}
-	.card-footer-1{
-		grid-area: f1;
-	}
-	.card-footer-2{
-		grid-area: f2;
-	}
-	.bar-top{
-		grid-area: bt;
-	}
-	.bar-right{
-		grid-area: br;
-	}
-	.bar-bottom{
-		grid-area: bb;
-	}
-	.bar-left{
-		grid-area: bl;
-	} 
+  grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1em;
+  grid-template-rows: 1em 4em min-content min-content 4em 1em;
+  grid-template-areas:
+    'bt bt bt bt bt bt bt bt bt bt bt bt'
+    'bl ch ch ch ch ch ch ch ch ch ch br'
+    'bl ci ci ci ci ci ci ci ci ci ci br'
+    'bl cb cb cb cb cb cb cb cb cb cb br'
+    'bl f1 f1 f1 f1 f1 f2 f2 f2 f2 f2 br'
+    'bb bb bb bb bb bb bb bb bb bb bb bb';
+  .card-header {
+    grid-area: ch;
+    background-color: $second-color;
+    display: flex;
+    align-items: center;
+    h2 {
+      color: $base-color;
+      font-family: $font-one;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-left: 1em;
+    }
+  }
+  .card-img {
+    grid-area: ci;
+    background-color: $base-color;
+    padding: 1em;
+    .wrap-img {
+      background-color: $second-color;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 100%;
+      height: 175px;
+    }
+    .animate-image {
+      animation: animateimage 30s infinite forwards;
+    }
+  }
+  .card-body {
+    grid-area: cb;
+    background-color: $second-color;
+    padding: 1em;
+    p {
+      font-family: $font-two;
+      color: $base-color;
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+  .card-footer-1,
+  .card-footer-2 {
+    background-color: $base-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 60%;
+      text-align: center;
+      color: $base-color;
+      background-color: $second-color;
+      font-family: $font-one;
+      font-size: 0.85em;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: $base-color-dark 0px 3px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  .card-footer-1 {
+    grid-area: f1;
+  }
+  .card-footer-2 {
+    grid-area: f2;
+  }
+  .bar-top {
+    grid-area: bt;
+  }
+  .bar-right {
+    grid-area: br;
+  }
+  .bar-bottom {
+    grid-area: bb;
+  }
+  .bar-left {
+    grid-area: bl;
+  }
 }
 .animate-overlay {
-    animation: overlay .5s forwards;
+  animation: overlay 0.5s forwards;
 }
 .animate-overlay-back {
-    animation: overlayback .5s forwards;
+  animation: overlayback 0.5s forwards;
 }
-
 
 /*slides*/
 
 .swiper-container {
-	height: 100%;
-	.slide1{
-		display: grid;
-		grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: 1em 4em 1fr 4em 1fr 4em 1em;
-		grid-template-areas: "bt bt bt bt bt bt bt bt bt bt bt bt"
-							 "bl h  h  h  h  h  h  h  h  h  h  h"
-							 "bl p  p  p  p  p  p  p  p  p  p  p"
-							 "bl t  t  t  t  t  t  t  t  t  t  t"
-							 "bl d  d  d  d  d  d  d  d  d  d  d"
-							 "bl f  f  f  f  f  f  f  f  f  f  f"
-							 "bb bb bb bb bb bb bb bb bb bb bb bb";
-		.header{
-			background-color: $base-color;
-			grid-area: h;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h1{
-				color: $second-color;
-				font-family: $font-one;
-				text-align: center;
-				font-size: 1.75em;
-				font-weight: 100;
-				letter-spacing: 1px;
-				margin: 0;
-			}
-		}
-		.photo{
-			grid-area: p;
-			background-color: $base-color-dark;
-			background-image: url("../img/delgadociterio.jpg");
-			background-position: center;
-			background-size: auto 100%;
-			background-repeat: no-repeat;
-		}
-		.title{
-			grid-area: t;
-			background-color: $second-color;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h2{
-				text-align: center;
-				color: $base-color;
-				font-family: $font-one;
-				font-size: 1.5em;
-				font-weight: 100;
-				margin: 0;
-			}
-		}
-		.description{
-			background-color: $base-color;
-			grid-area: d;
-			padding: 0em 3em 0em 3em;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: min-content min-content;
-			grid-template-areas:"t  t  t"
-								"l1 l2 l3";
-			.text{
-				grid-area: t;
-				display: flex;
-				align-items: start;
-				justify-content: center;
-				p{
-					color: $second-color;
-					text-align: center;
-					font-family: $font-two;
-					font-size: 1em;
-					margin: 1em 0 2em 0;
-				}
-			}
-			.icon{
-				width: 2.5em;
-				display: block;
-				margin: 0 auto;
-			}
-			.link{
-				text-align: center;
-				display: block;
-				color: $second-color;
-				font-family: $font-two;
-				font-size: .75em;
-				letter-spacing: 1px;
-				margin-top: 1em;
-				text-decoration: none;
-			}
-			.logo1{
-				grid-area: l1;
-			}
-			.logo2{
-				grid-area: l2;
-			}
-			.logo3{
-				grid-area: l3;
-			}
-		}
-		.footer{
-			grid-area: f;
-			background-color: $base-color;
-		}
-		.bar-top{
-			grid-area: bt;
-			background-color: $second-color;
-		}
-		.bar-left{
-			grid-area: bl;
-			background-color: $second-color;
-		}
-		.bar-bottom{
-			grid-area: bb;
-			background-color: $second-color;
-		}
-	}
-	.slide2{
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
-		grid-template-areas: "bt bt bt bt bt bt bt bt bt bt bt bt"
-							 "h  h  h  h  h  h  h  h  h  h  h  h "
-							 "t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 t1"
-							 "t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2"
-							 "t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3"
-							 "f  f  f  f  f  f  f  f  f  f  f  f "
-							 "bb bb bb bb bb bb bb bb bb bb bb bb";
-		.header{
-			background-color: $base-color;
-			grid-area: h;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h2{
-				color: $second-color;
-				font-family: $font-one;
-				text-align: center;
-				font-size: 1.5em;
-				font-weight: 100;
-				letter-spacing: 1px;
-				margin: 0;
-			}
-		}
-		.about-text{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0em 3em 0em 3em;
-			p{
-				font-family: $font-two;
-				font-size: 1em;
-				text-align: center;
-			}
-		}
-		.text1{
-			grid-area: t1;
-			background-color: $second-color;
-			p{
-				color: $base-color;
-			}
-		}
-		.text2{
-			grid-area: t2;
-			background-color: $base-color;
-			p{
-				color: $second-color;
-			}
-		}
-		.text3{
-			grid-area: t3;
-			background-color: $second-color;
-			p{
-				color: $base-color;
-			}
-		}
-		.bar-top{
-			grid-area: bt;
-			background-color: $second-color;
-		}
-		.footer{
-			grid-area: f;
-			background-color: $base-color;
-		}
-		.bar-bottom{
-			grid-area: bb;
-			background-color: $second-color;
-		}
-	}
-	.slide3{
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 1em 4em 1fr 1fr 1fr 1fr 4em 1em;
-		grid-template-areas: "bt bt bt bt bt bt bt bt bt bt bt bt"
-							 "h  h  h  h  h  h  h  h  h  h  h  h "
-							 "p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 p1"
-							 "p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 p2"
-							 "p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 p3"
-							 "p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 p4"
-							 "f  f  f  f  f  f  f  f  f  f  f  f "
-							 "bb bb bb bb bb bb bb bb bb bb bb bb";
-		.header{
-			background-color: $base-color;
-			grid-area: h;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h2{
-				color: $second-color;
-				font-family: $font-one;
-				text-align: center;
-				font-size: 1.5em;
-				font-weight: 100;
-				letter-spacing: 1px;
-				margin: 0;
-			}
-		}
-		.percentage{
-			padding: 0em 3em 0em 3em;
-			h3{
-				font-size: 1em;
-				font-family: $font-one;
-				margin-top: .6em;
-				margin-bottom: .4em;
-			}
-			.per-container{
-				width: 100%;
-				.per-number{
-					font-family: $font-two;
-					font-size: 1em;
-					padding: .1em .4em;
-					span{
-						color: #fff;
-					}
-				}
-			}
-			p{
-				font-family: $font-two;
-				font-size: .70em;
-				margin-top: .6em;
-			}
-		}
-		.combination1{
-			background-color: $base-color;
-			h3{
-				color: $second-color;
-			}
-			.per-container{
-				background-color: $second-color;
-				.per-number{
-					background-color: $base-color-dark;
-				}
-			}
-			p{
-				color: $second-color;
-			}
-		}
-		.combination2{
-			background-color: $second-color;
-			h3{
-				color: $base-color;
-			}
-			.per-container{
-				background-color: $base-color-dark;
-				.per-number{
-					background-color: $base-color;
-				}
-			}
-			p{
-				color: $base-color;
-			}
-		}
-		.per1{grid-area: p1;
-			.per-number{
-				width: 90%;
-			}
-		}
-		.per2{grid-area: p2;
-			.per-number{
-				width: 80%;
-			}
-		}
-		.per3{grid-area: p3;
-			.per-number{
-				width: 70%;
-			}
-		}
-		.per4{grid-area: p4;
-			.per-number{
-				width: 90%;
-			}
-		}
-		.bar-top{
-			grid-area: bt;
-			background-color: $second-color;
-		}
-		.footer{
-			grid-area: f;
-			background-color: $base-color;
-		}
-		.bar-bottom{
-			grid-area: bb;
-			background-color: $second-color;
-		}
-	}
-	.slide4{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1em;
-		grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
-		grid-template-areas: "bt bt bt bt bt bt bt bt bt bt bt bt"
-							 "h  h  h  h  h  h  h  h  h  h  h  br"
-							 "bl g1 g1 g1 g1 g1 g2 g2 g2 g2 g2 br"
-							 "bl g3 g3 g3 g3 g3 g4 g4 g4 g4 g4 br"
-							 "bl g5 g5 g5 g5 g5 g6 g6 g6 g6 g6 br"
-							 "f  f  f  f  f  f  f  f  f  f  f  br"
-							 "bb bb bb bb bb bb bb bb bb bb bb bb";
-		.header{
-			background-color: $base-color;
-			grid-area: h;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h2{
-				color: $second-color;
-				font-family: $font-one;
-				text-align: center;
-				font-size: 1.5em;
-				font-weight: 100;
-				letter-spacing: 1px;
-				margin: 0;
-			}
-		}
-		.gallery-space{
-			h3{
-				font-size: 1em;
-				font-family: $font-one;
-				margin-top: .6em;
-				margin-bottom: .8em;
-				text-align: center;
-			}
-			img{
-			    width: 80%;
-			    display: block;
-			    margin: 0 auto;
-			    cursor: pointer;
-			}
-			.gallery-image{
-				border-radius: 5px;
-				box-shadow: $base-color-dark 0px 3px;
-			}
-			.begallery{
-				width: 40%;
-			}
-		}
-		.combination1{
-			background-color: $second-color;
-			h3{
-				color: $base-color;
-			}
-		}
-		.combination2{
-			background-color: $base-color;
-			h3{
-				color: $second-color;
-			}
-			a{
-				color: $second-color;
-				font-family: $font-two;
-				font-size: .75em;
-				letter-spacing: 1px;
-				margin-top: .3em;
-				text-decoration: none;
-				text-align: center;
-				display: block;
-				line-height: 1.25em;
-			}
-		}
-		.gall1{
-			grid-area: g1;
-		}
-		.gall2{
-			grid-area: g2;
-		}
-		.gall3{
-			grid-area: g3;
-		}
-		.gall4{
-			grid-area: g4;
-		}
-		.gall5{
-			grid-area: g5;
-		}
-		.gall6{
-			grid-area: g6;
-			img.begallery{
-				margin-top: -.75em;
-			}
-		}
-		.footer{
-			grid-area: f;
-			background-color: $base-color;
-		}
-		.bar-top{
-			grid-area: bt;
-			background-color: $second-color;
-		}
-		.bar-right{
-			grid-area: br;
-			background-color: $second-color;
-		}
-		.bar-left{
-			grid-area: bl;
-			background-color: $second-color;
-		}
-		.bar-bottom{
-			grid-area: bb;
-			background-color: $second-color;
-		}
-	}
+  height: 100%;
+  .slide1 {
+    display: grid;
+    grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1em 4em 1fr 4em 1fr 4em 1em;
+    grid-template-areas:
+      'bt bt bt bt bt bt bt bt bt bt bt bt'
+      'bl h  h  h  h  h  h  h  h  h  h  h'
+      'bl p  p  p  p  p  p  p  p  p  p  p'
+      'bl t  t  t  t  t  t  t  t  t  t  t'
+      'bl d  d  d  d  d  d  d  d  d  d  d'
+      'bl f  f  f  f  f  f  f  f  f  f  f'
+      'bb bb bb bb bb bb bb bb bb bb bb bb';
+    .header {
+      background-color: $base-color;
+      grid-area: h;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        color: $second-color;
+        font-family: $font-one;
+        text-align: center;
+        font-size: 1.75em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+    }
+    .photo {
+      grid-area: p;
+      background-color: $base-color-dark;
+      background-image: url('../img/delgadociterio.jpg');
+      background-position: center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+    .title {
+      grid-area: t;
+      background-color: $second-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        text-align: center;
+        color: $base-color;
+        font-family: $font-one;
+        font-size: 1.5em;
+        font-weight: 100;
+        margin: 0;
+      }
+    }
+    .description {
+      background-color: $base-color;
+      grid-area: d;
+      padding: 0em 3em 0em 3em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: min-content min-content;
+      grid-template-areas:
+        't  t  t'
+        'l1 l2 l3';
+      .text {
+        grid-area: t;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        p {
+          color: $second-color;
+          text-align: center;
+          font-family: $font-two;
+          font-size: 1em;
+          margin: 1em 0 2em 0;
+        }
+      }
+      .icon {
+        width: 2.5em;
+        display: block;
+        margin: 0 auto;
+      }
+      .link {
+        text-align: center;
+        display: block;
+        color: $second-color;
+        font-family: $font-two;
+        font-size: 0.75em;
+        letter-spacing: 1px;
+        margin-top: 1em;
+        text-decoration: none;
+      }
+      .logo1 {
+        grid-area: l1;
+      }
+      .logo2 {
+        grid-area: l2;
+      }
+      .logo3 {
+        grid-area: l3;
+      }
+    }
+    .footer {
+      grid-area: f;
+      background-color: $base-color;
+    }
+    .bar-top {
+      grid-area: bt;
+      background-color: $second-color;
+    }
+    .bar-left {
+      grid-area: bl;
+      background-color: $second-color;
+    }
+    .bar-bottom {
+      grid-area: bb;
+      background-color: $second-color;
+    }
+  }
+  .slide2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
+    grid-template-areas:
+      'bt bt bt bt bt bt bt bt bt bt bt bt'
+      'h  h  h  h  h  h  h  h  h  h  h  h '
+      't1 t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 t1'
+      't2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 t2'
+      't3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 t3'
+      'f  f  f  f  f  f  f  f  f  f  f  f '
+      'bb bb bb bb bb bb bb bb bb bb bb bb';
+    .header {
+      background-color: $base-color;
+      grid-area: h;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: $second-color;
+        font-family: $font-one;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+    }
+    .about-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0em 3em 0em 3em;
+      p {
+        font-family: $font-two;
+        font-size: 1em;
+        text-align: center;
+      }
+    }
+    .text1 {
+      grid-area: t1;
+      background-color: $second-color;
+      p {
+        color: $base-color;
+      }
+    }
+    .text2 {
+      grid-area: t2;
+      background-color: $base-color;
+      p {
+        color: $second-color;
+      }
+    }
+    .text3 {
+      grid-area: t3;
+      background-color: $second-color;
+      p {
+        color: $base-color;
+      }
+    }
+    .bar-top {
+      grid-area: bt;
+      background-color: $second-color;
+    }
+    .footer {
+      grid-area: f;
+      background-color: $base-color;
+    }
+    .bar-bottom {
+      grid-area: bb;
+      background-color: $second-color;
+    }
+  }
+  .slide3 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1em 4em 1fr 1fr 1fr 1fr 4em 1em;
+    grid-template-areas:
+      'bt bt bt bt bt bt bt bt bt bt bt bt'
+      'h  h  h  h  h  h  h  h  h  h  h  h '
+      'p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 p1'
+      'p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 p2'
+      'p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 p3'
+      'p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 p4'
+      'f  f  f  f  f  f  f  f  f  f  f  f '
+      'bb bb bb bb bb bb bb bb bb bb bb bb';
+    .header {
+      background-color: $base-color;
+      grid-area: h;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: $second-color;
+        font-family: $font-one;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+    }
+    .percentage {
+      padding: 0em 3em 0em 3em;
+      h3 {
+        font-size: 1em;
+        font-family: $font-one;
+        margin-top: 0.6em;
+        margin-bottom: 0.4em;
+      }
+      .per-container {
+        width: 100%;
+        .per-number {
+          font-family: $font-two;
+          font-size: 1em;
+          padding: 0.1em 0.4em;
+          span {
+            color: #fff;
+          }
+        }
+      }
+      p {
+        font-family: $font-two;
+        font-size: 0.7em;
+        margin-top: 0.6em;
+      }
+    }
+    .combination1 {
+      background-color: $base-color;
+      h3 {
+        color: $second-color;
+      }
+      .per-container {
+        background-color: $second-color;
+        .per-number {
+          background-color: $base-color-dark;
+        }
+      }
+      p {
+        color: $second-color;
+      }
+    }
+    .combination2 {
+      background-color: $second-color;
+      h3 {
+        color: $base-color;
+      }
+      .per-container {
+        background-color: $base-color-dark;
+        .per-number {
+          background-color: $base-color;
+        }
+      }
+      p {
+        color: $base-color;
+      }
+    }
+    .per1 {
+      grid-area: p1;
+      .per-number {
+        width: 90%;
+      }
+    }
+    .per2 {
+      grid-area: p2;
+      .per-number {
+        width: 80%;
+      }
+    }
+    .per3 {
+      grid-area: p3;
+      .per-number {
+        width: 70%;
+      }
+    }
+    .per4 {
+      grid-area: p4;
+      .per-number {
+        width: 90%;
+      }
+    }
+    .bar-top {
+      grid-area: bt;
+      background-color: $second-color;
+    }
+    .footer {
+      grid-area: f;
+      background-color: $base-color;
+    }
+    .bar-bottom {
+      grid-area: bb;
+      background-color: $second-color;
+    }
+  }
+  .slide4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1em;
+    grid-template-rows: 1em 4em 1fr 1fr 1fr 4em 1em;
+    grid-template-areas:
+      'bt bt bt bt bt bt bt bt bt bt bt bt'
+      'h  h  h  h  h  h  h  h  h  h  h  br'
+      'bl g1 g1 g1 g1 g1 g2 g2 g2 g2 g2 br'
+      'bl g3 g3 g3 g3 g3 g4 g4 g4 g4 g4 br'
+      'bl g5 g5 g5 g5 g5 g6 g6 g6 g6 g6 br'
+      'f  f  f  f  f  f  f  f  f  f  f  br'
+      'bb bb bb bb bb bb bb bb bb bb bb bb';
+    .header {
+      background-color: $base-color;
+      grid-area: h;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: $second-color;
+        font-family: $font-one;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+    }
+    .gallery-space {
+      h3 {
+        font-size: 1em;
+        font-family: $font-one;
+        margin-top: 0.6em;
+        margin-bottom: 0.8em;
+        text-align: center;
+      }
+      img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+      .gallery-image {
+        border-radius: 5px;
+        box-shadow: $base-color-dark 0px 3px;
+      }
+      .begallery {
+        width: 40%;
+      }
+    }
+    .combination1 {
+      background-color: $second-color;
+      h3 {
+        color: $base-color;
+      }
+    }
+    .combination2 {
+      background-color: $base-color;
+      h3 {
+        color: $second-color;
+      }
+      a {
+        color: $second-color;
+        font-family: $font-two;
+        font-size: 0.75em;
+        letter-spacing: 1px;
+        margin-top: 0.3em;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        line-height: 1.25em;
+      }
+    }
+    .gall1 {
+      grid-area: g1;
+    }
+    .gall2 {
+      grid-area: g2;
+    }
+    .gall3 {
+      grid-area: g3;
+    }
+    .gall4 {
+      grid-area: g4;
+    }
+    .gall5 {
+      grid-area: g5;
+    }
+    .gall6 {
+      grid-area: g6;
+      img.begallery {
+        margin-top: -0.75em;
+      }
+    }
+    .footer {
+      grid-area: f;
+      background-color: $base-color;
+    }
+    .bar-top {
+      grid-area: bt;
+      background-color: $second-color;
+    }
+    .bar-right {
+      grid-area: br;
+      background-color: $second-color;
+    }
+    .bar-left {
+      grid-area: bl;
+      background-color: $second-color;
+    }
+    .bar-bottom {
+      grid-area: bb;
+      background-color: $second-color;
+    }
+  }
 }
-
 
 /*swiper-buttons*/
 
-.swiper-button-next, .swiper-button-prev {
-	top: initial !important;
-	outline: none;
-	bottom: 3.5em;
+.swiper-button-next,
+.swiper-button-prev {
+  top: initial !important;
+  outline: none;
+  bottom: 3.5em;
 }
-.swiper-button-next.swiper-button-white, .swiper-button-prev.swiper-button-white {
-    font-size: .5em;
+.swiper-button-next.swiper-button-white,
+.swiper-button-prev.swiper-button-white {
+  font-size: 0.5em;
 }
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
-	opacity: 0 !important;
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
 }
 .swiper-button-next {
-	right: 2em !important;
+  right: 2em !important;
 }
 .swiper-button-prev {
-	left: 2em !important;
+  left: 2em !important;
 }
-
 
 /*animations*/
 
 @keyframes overlay {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes overlayback {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes animateimage {
-    5% {
-    	background-position-y: 0%; 
-    }
-    50% {
-    	background-position-y: 100%;
-    }
-    50% {
-    	background-position-y: 100%;
-    }
-    100% {
-        background-position-y: 0%;
-    }
+  5% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
 }
-
 
 @import 'tablet';
 @import 'computer';
 @import 'wide';
 @import 'wider';
 @import 'landscape';
-
